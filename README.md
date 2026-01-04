@@ -1,47 +1,48 @@
-# Fraud-Detection
-Credit Card Fraud Detection project using Logistic Regression. Includes EDA, categorical encoding, model training, and evaluation with precision, recall, F1-score, and accuracy to identify fraudulent transactions.
+Supervised Machine Learning Model Comparison & Optimization
 
-# Credit Card Fraud Detection using Logistic Regression
+📖 Project Overview
+This project focuses on building and comparing multiple supervised learning classification models to identify the most accurate model for the given dataset. The models are trained, evaluated, and optimized using hyperparameter tuning to achieve the best performance.
 
-## 📌 Project Overview
-This project focuses on detecting fraudulent credit card transactions using a supervised machine learning approach. Logistic Regression is applied to classify transactions as fraud or non-fraud based on transaction and customer-related features.
+🧠 Models Implemented
+The following machine learning algorithms were implemented and evaluated:
+Logistic Regression
+K-Nearest Neighbors (KNN)
+Decision Tree
+Random Forest
+Support Vector Machine (SVM)
+Each model was trained on the training dataset and evaluated using accuracy as the primary metric.
 
-## 📊 Dataset
-The dataset contains transaction-level information including:
-- Transaction amount
-- Merchant category
-- Customer gender
-- Transaction location
-- Fraud label (target variable)
+🔍 Model Evaluation & Comparison
+After initial evaluation, Support Vector Machine (SVM) achieved the highest accuracy among the baseline models.
+To further improve performance, hyperparameter optimization was applied, especially on ensemble models.
 
-## 🔍 Exploratory Data Analysis (EDA)
-- Distribution of transaction amounts by fraud status using histograms
-- Box plots to compare transaction amount spread between fraud and non-fraud cases
-- Insights on overlap and variability of transaction amounts
+⚙️ Hyperparameter Optimization
+GridSearchCV was used to tune the Random Forest model, resulting in the following optimal configuration:
+Best Random Forest Parameters:
+{
+  'max_depth': 5,
+  'min_samples_leaf': 2,
+  'min_samples_split': 2,
+  'n_estimators': 200
+}
+Best Accuracy Achieved:
+📈 0.7957
+After tuning, Random Forest outperformed all other models, including SVM.
 
-## 🛠️ Data Preprocessing
-- Categorical features encoded using LabelEncoder
-- Feature and target separation
-- Train-test split (70% training, 30% testing)
+🏆 Final Conclusion
+SVM performed best among untuned models
+After optimization, Random Forest achieved the highest accuracy overall
+Hyperparameter tuning significantly improved model performance
 
-## 🤖 Model Used
-- **Logistic Regression**
-- Suitable for binary classification problems
-- Predicts probability of a transaction being fraudulent
+🛠️ Tools & Technologies Used
+Python
+Scikit-learn
+Pandas
+NumPy
+Jupyter Notebook
 
-## 📈 Model Evaluation
-The model is evaluated using:
-- Accuracy
-- Precision
-- Recall
-- F1-score
-- Classification Report
-
-Key observation:
-- High recall for fraud cases, ensuring most fraudulent transactions are detected
-- Moderate overall accuracy, highlighting class imbalance challenges
-
-## 🧠 Conclusion
-Logistic Regression performs effectively in identifying fraudulent transactions, especially when recall is prioritized. However, transaction amount alone is insufficient, and combining multiple features improves detection performance.
-
-
+📂 Project Structure
+Data preprocessing
+Model training & evaluation
+Hyperparameter tuning using GridSearchCV
+Performance comparison and final model selection
