@@ -1,48 +1,79 @@
-Supervised Machine Learning Model Comparison & Optimization
+# 📊 Supervised Machine Learning Model Comparison & Optimization
 
-📖 Project Overview
-This project focuses on building and comparing multiple supervised learning classification models to identify the most accurate model for the given dataset. The models are trained, evaluated, and optimized using hyperparameter tuning to achieve the best performance.
+## 📌 Project Description
+This project focuses on building, evaluating, and comparing multiple **supervised machine learning classification models** to determine the most effective algorithm for the given dataset. The study also includes **hyperparameter tuning** to enhance model performance and select the optimal model.
 
-🧠 Models Implemented
-The following machine learning algorithms were implemented and evaluated:
-Logistic Regression
-K-Nearest Neighbors (KNN)
-Decision Tree
-Random Forest
-Support Vector Machine (SVM)
-Each model was trained on the training dataset and evaluated using accuracy as the primary metric.
+---
 
-🔍 Model Evaluation & Comparison
-After initial evaluation, Support Vector Machine (SVM) achieved the highest accuracy among the baseline models.
-To further improve performance, hyperparameter optimization was applied, especially on ensemble models.
+## 🎯 Objectives
+- Implement multiple supervised learning algorithms  
+- Compare model performance using accuracy  
+- Perform hyperparameter tuning to improve results  
+- Identify the best-performing model  
 
-⚙️ Hyperparameter Optimization
-GridSearchCV was used to tune the Random Forest model, resulting in the following optimal configuration:
-Best Random Forest Parameters:
+---
+
+## 🧠 Algorithms Implemented
+The following machine learning models were trained and evaluated:
+
+- Logistic Regression  
+- K-Nearest Neighbors (KNN)  
+- Decision Tree  
+- Random Forest  
+- Support Vector Machine (SVM)  
+
+---
+
+## 🔍 Model Evaluation
+- All models were trained on the training dataset  
+- Accuracy was used as the primary evaluation metric  
+- Among baseline models, **Support Vector Machine (SVM)** achieved the highest accuracy  
+
+---
+
+## ⚙️ Hyperparameter Optimization
+To further improve model performance, **GridSearchCV** was applied to tune the Random Forest classifier.
+
+### Best Random Forest Parameters
 {
   'max_depth': 5,
   'min_samples_leaf': 2,
   'min_samples_split': 2,
   'n_estimators': 200
 }
-Best Accuracy Achieved:
-📈 0.7957
-After tuning, Random Forest outperformed all other models, including SVM.
 
-🏆 Final Conclusion
-SVM performed best among untuned models
-After optimization, Random Forest achieved the highest accuracy overall
-Hyperparameter tuning significantly improved model performance
+## 📈 Best Accuracy Achieved
+📊 **Accuracy:** **0.7957**
 
-🛠️ Tools & Technologies Used
-Python
-Scikit-learn
-Pandas
-NumPy
-Jupyter Notebook
+After hyperparameter optimization, the **Random Forest model outperformed all other models**, including Support Vector Machine (SVM).
 
-📂 Project Structure
-Data preprocessing
-Model training & evaluation
-Hyperparameter tuning using GridSearchCV
-Performance comparison and final model selection
+---
+
+## 🏆 Results & Conclusion
+- SVM performed best among the untuned baseline models  
+- Hyperparameter tuning significantly improved model performance  
+- Optimized Random Forest achieved the highest overall accuracy  
+- Random Forest was selected as the **final best-performing model**  
+
+---
+
+## 🛠️ Tools & Technologies
+- Python  
+- Scikit-learn  
+- Pandas  
+- NumPy  
+- Jupyter Notebook  
+
+---
+
+## 📂 Project Workflow
+- Data preprocessing  
+- Model training and evaluation  
+- Hyperparameter tuning using GridSearchCV  
+- Model comparison and final model selection  
+
+---
+
+## 🎯 Final Outcome
+The optimized **Random Forest classifier** achieved an accuracy of **79.57%**, making it the **best-performing model** in this project.
+
